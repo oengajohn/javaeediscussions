@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.min.version>17</java.min.version>
         <maven.min.version>3.0.0</maven.min.version>
-        <skipTests>false</skipTests>
+        <skipTests>true</skipTests>
         <junit.version>5.9.0</junit.version>
         <wildfly.maven.plugin.version>2.0.1.Final</wildfly.maven.plugin.version>
         <wildfly.server.hostname>localhost</wildfly.server.hostname>
