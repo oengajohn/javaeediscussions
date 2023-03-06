@@ -21,7 +21,7 @@ import io.swagger.v3.oas.annotations.servers.ServerVariable;
         servers = {
                 @Server(
                         description = "server 1",
-                        url = "http://localhost:8080/arch",
+                        url = "http://localhost:8080/javaeediscussions",
                         variables = {
                                 @ServerVariable(name = "var1", description = "var 1", defaultValue = "1", allowableValues = {"1", "2"}),
                                 @ServerVariable(name = "var2", description = "var 2", defaultValue = "1", allowableValues = {"1", "2"})

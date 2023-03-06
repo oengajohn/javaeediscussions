@@ -27,7 +27,8 @@ public class Task {
     private String name;
 
 
-    @Column(name="TARGET_NAME") @Future
+    @Column(name="TARGET_NAME")
+    @Future
     private LocalDate targetDate;
 
     private boolean completed;

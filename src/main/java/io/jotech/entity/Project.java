@@ -16,6 +16,9 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @NamedQueries({
     @NamedQuery(name="Project.findAllProjects",
         query = "select p from Project p order by p.name"),
@@ -28,6 +31,8 @@ import javax.validation.constraints.Size;
                 "where p.id = :id and t.project = p"),
 })
 @Entity
+@Getter
+@Setter
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -57,20 +62,7 @@ public class Project {
         this.description = description;
     }
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
-
-    public String getHeadline() { return headline; }
-    public void setHeadline(String headline) { this.headline = headline; }
-
-    public List<Task> getTasks() { return tasks; }
-    public void setTasks(List<Task> tasks) { this.tasks = tasks; }
 
     public boolean addTask( Task task ) {
         if ( ! tasks.contains( task) ) {
